@@ -42,6 +42,7 @@ public class BussinessSteps {
         if(productExpense == null){
             cProductExpense = 0;
         }
+
         visit.setServiceExpense(cServiceExpense);
         visit.setProductExpense(cProductExpense);
         actualTotalExpense = visit.getTotalExpense();
