@@ -1,23 +1,28 @@
 package com.buoi21.exercise;
 
-import java.util.Date;
-
 public class TaiKhoan {
-    private long maTK;
+    private String maTaiKhoan;
     private String hoTen;
-    private Date ngaySinh;
-    private String gioiTinh;
-    private double soDu = 50.000;
+    private String ngaySinh;
+    private int gioiTinh;
+    private long soDu;
 
     public TaiKhoan() {
+        this.soDu = 50000;
     }
 
-    public long getMaTK() {
-        return maTK;
+    public TaiKhoan(String maTaiKhoan, String hoTen) {
+        this.maTaiKhoan = maTaiKhoan;
+        this.hoTen = hoTen;
+        this.soDu = 50000;
     }
 
-    public void setMaTK(long maTK) {
-        this.maTK = maTK;
+    public void setMaTaiKhoan(String maTaiKhoan) {
+        this.maTaiKhoan = maTaiKhoan;
+    }
+
+    public String getMaTaiKhoan() {
+        return maTaiKhoan;
     }
 
     public String getHoTen() {
@@ -28,50 +33,42 @@ public class TaiKhoan {
         this.hoTen = hoTen;
     }
 
-    public Date getNgaySinh() {
+    public String getNgaySinh() {
         return ngaySinh;
     }
 
-    public void setNgaySinh(Date ngaySinh) {
+    public void setNgaySinh(String ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
 
-    public String getGioiTinh() {
+    public int getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(String gioiTinh) {
+    public void setGioiTinh(int gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
-    public double getSoDu() {
+    public long getSoDu() {
         return soDu;
     }
 
-    public void setSoDu(double soDu) {
+    public void setSoDu(long soDu) {
         this.soDu = soDu;
     }
 
-    public TaiKhoan(long maTK, String hoTen, Date ngaySinh, String gioiTinh, double soDu) {
-        this.maTK = maTK;
-        this.hoTen = hoTen;
-        this.ngaySinh = ngaySinh;
-        this.gioiTinh = gioiTinh;
-        this.soDu = soDu;
+    public long kiemTraSoDu() {
+        return soDu;
     }
 
     @Override
     public String toString() {
-        return "TaiKhoan[" +
-                "maTK=" + maTK +
+        return "TaiKhoan{" +
+                "maTaiKhoan='" + maTaiKhoan + '\'' +
                 ", hoTen='" + hoTen + '\'' +
-                ", ngaySinh=" + ngaySinh +
-                ", gioiTinh='" + gioiTinh + '\'' +
+                ", ngaySinh='" + ngaySinh + '\'' +
+                ", gioiTinh=" + gioiTinh +
                 ", soDu=" + soDu +
-                ']';
-    }
-
-    public double kiemTraSoDu(){
-        return getSoDu();
+                '}';
     }
 }
